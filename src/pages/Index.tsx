@@ -1,23 +1,21 @@
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import FloatingCardsSection from "@/components/FloatingCardsSection";
-import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
-import PortfolioSection from "@/components/PortfolioSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import ModernNavigation from "@/components/ModernNavigation";
+import ModernHeroSection from "@/components/ModernHeroSection";
+import HangingCardsCarousel from "@/components/HangingCardsCarousel";
+import AnimatedServiceSections from "@/components/AnimatedServiceSections";
+import ModernPortfolioSection from "@/components/ModernPortfolioSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import CTAFooterSection from "@/components/CTAFooterSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <HeroSection />
-      <FloatingCardsSection />
-      <ServicesSection />
-      <AboutSection />
-      <PortfolioSection />
-      <ContactSection />
-      <Footer />
+      <ModernNavigation />
+      <ModernHeroSection />
+      <HangingCardsCarousel />
+      <AnimatedServiceSections />
+      <ModernPortfolioSection />
+      <TestimonialsSection />
+      <CTAFooterSection />
     </div>
   );
 };
