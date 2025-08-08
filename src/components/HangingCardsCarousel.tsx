@@ -1,54 +1,66 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Search, Share2, Target, Mail, Users, Palette } from "lucide-react";
+import seoImage from "@/assets/seo-service.jpg";
+import socialMediaImage from "@/assets/social-media-service.jpg";
+import googleAdsImage from "@/assets/google-ads-service.jpg";
+import emailMarketingImage from "@/assets/email-marketing-service.jpg";
+import influencerMarketingImage from "@/assets/influencer-marketing-service.jpg";
+import brandingImage from "@/assets/branding-service.jpg";
 
 const HangingCardsCarousel = () => {
   const services = [
     {
       id: 1,
       title: "SEO",
-      description: "Boost your search rankings",
+      description: "Boost your search rankings with data-driven optimization strategies",
       icon: Search,
+      image: seoImage,
       color: "from-blue-400 to-blue-600",
       clipColor: "bg-green-500"
     },
     {
       id: 2,
       title: "Social Media Marketing",
-      description: "Engage your audience",
+      description: "Engage your audience across all social platforms",
       icon: Share2,
+      image: socialMediaImage,
       color: "from-purple-400 to-purple-600",
       clipColor: "bg-green-500"
     },
     {
       id: 3,
       title: "Google Ads",
-      description: "Targeted advertising campaigns",
+      description: "Targeted advertising campaigns that convert",
       icon: Target,
+      image: googleAdsImage,
       color: "from-red-400 to-red-600",
       clipColor: "bg-green-500"
     },
     {
       id: 4,
       title: "Email Marketing",
-      description: "Direct customer communication",
+      description: "Direct customer communication that drives results",
       icon: Mail,
+      image: emailMarketingImage,
       color: "from-green-400 to-green-600",
       clipColor: "bg-green-500"
     },
     {
       id: 5,
       title: "Influencer Marketing",
-      description: "Partner with key voices",
+      description: "Partner with key voices in your industry",
       icon: Users,
+      image: influencerMarketingImage,
       color: "from-yellow-400 to-yellow-600",
       clipColor: "bg-green-500"
     },
     {
       id: 6,
       title: "Branding",
-      description: "Build your brand identity",
+      description: "Build your brand identity that stands out",
       icon: Palette,
+      image: brandingImage,
       color: "from-pink-400 to-pink-600",
       clipColor: "bg-green-500"
     }
@@ -83,12 +95,13 @@ const HangingCardsCarousel = () => {
         {/* Auto-scrolling Cards */}
         <motion.div
           animate={{
-            x: [0, -50 * services.length + "%"],
+            x: [`0%`, `-${(services.length * 320)}px`],
           }}
           transition={{
-            duration: 30,
+            duration: 25,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
+            repeatType: "loop"
           }}
           className="flex gap-8 absolute top-8"
           style={{ width: `${duplicatedServices.length * 320}px` }}
@@ -125,28 +138,38 @@ const HangingCardsCarousel = () => {
                 </div>
 
                 {/* Card */}
-                <Card className="w-72 h-80 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white border-0">
-                  <CardContent className="p-6 h-full flex flex-col">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 mx-auto`}>
-                      <IconComponent className="w-8 h-8 text-white" />
+                <Card className="w-72 h-96 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white border-0 overflow-hidden">
+                  <CardContent className="p-0 h-full flex flex-col">
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      <div className={`absolute top-4 right-4 w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-center mb-4 text-foreground">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground text-center leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    <div className="mt-auto pt-6">
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="w-full py-3 bg-gradient-to-r from-accent to-primary text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-                      >
-                        Learn More
-                      </motion.button>
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold text-center mb-3 text-foreground">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-muted-foreground text-center leading-relaxed text-sm flex-1">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mt-6">
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-full py-3 bg-gradient-to-r from-accent to-primary text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                        >
+                          Learn More
+                        </motion.button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

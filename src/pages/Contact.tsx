@@ -3,9 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, MapPin, Mail, Send, TrendingUp, Target, BarChart3, Users, Globe, Zap, Star, Heart } from "lucide-react";
+import { Phone, MapPin, Mail, Send, TrendingUp, Target, BarChart3, Users, Globe, Zap, Star, Heart, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 import ModernNavigation from "@/components/ModernNavigation";
 
 const Contact = () => {
@@ -100,6 +101,20 @@ const Contact = () => {
 
       <div className="pt-24 pb-20">
         <div className="container mx-auto px-6">
+          {/* Back Button */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <Link to="/">
+              <Button variant="outline" className="flex items-center gap-2 hover:bg-accent/10 transition-colors">
+                <ArrowLeft className="w-4 h-4" />
+                Back to Home
+              </Button>
+            </Link>
+          </motion.div>
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
