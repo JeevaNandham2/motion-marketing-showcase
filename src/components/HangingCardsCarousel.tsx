@@ -165,7 +165,7 @@ const HangingCardsCarousel = () => {
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="w-full py-3 bg-gradient-to-r from-accent to-primary text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                          className="w-full py-3 bg-gradient-to-r from-accent to-primary text-accent-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 z-10 relative"
                         >
                           Learn More
                         </motion.button>

@@ -13,54 +13,60 @@ const ModernPortfolioSection = () => {
       title: "E-commerce SEO Campaign",
       category: "SEO",
       description: "Increased organic traffic by 300% for fashion retailer",
-      image: "/lovable-uploads/d2205550-ae2d-4487-88e8-67c35e4a87dc.png",
+      image: "/src/assets/seo-service.jpg",
       metrics: { traffic: "+300%", conversion: "+45%", revenue: "+180%" },
-      tags: ["SEO", "E-commerce", "Content Marketing"]
+      tags: ["SEO", "E-commerce", "Content Marketing"],
+      driveLink: "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR"
     },
     {
       id: 2,
       title: "Social Media Transformation",
       category: "Social Media",
       description: "Built engaged community of 50k+ followers",
-      image: "/lovable-uploads/d2205550-ae2d-4487-88e8-67c35e4a87dc.png",
+      image: "/src/assets/social-media-service.jpg",
       metrics: { followers: "+50k", engagement: "+250%", reach: "+400%" },
-      tags: ["Social Media", "Community Building", "Content Creation"]
+      tags: ["Social Media", "Community Building", "Content Creation"],
+      driveLink: "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR"
     },
     {
       id: 3,
       title: "PPC Campaign Optimization",
       category: "Google Ads",
       description: "Reduced cost per acquisition by 60% while doubling conversions",
-      image: "/lovable-uploads/d2205550-ae2d-4487-88e8-67c35e4a87dc.png",
+      image: "/src/assets/google-ads-service.jpg",
       metrics: { cpa: "-60%", conversions: "+200%", roas: "450%" },
-      tags: ["Google Ads", "PPC", "Conversion Optimization"]
+      tags: ["Google Ads", "PPC", "Conversion Optimization"],
+      driveLink: "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR"
     },
     {
       id: 4,
       title: "Email Marketing Automation",
       category: "Email Marketing",
       description: "Automated email sequences generating $100k+ monthly revenue",
-      image: "/lovable-uploads/d2205550-ae2d-4487-88e8-67c35e4a87dc.png",
+      image: "/src/assets/email-marketing-service.jpg",
       metrics: { revenue: "+$100k", openRate: "35%", clickRate: "8.5%" },
-      tags: ["Email Marketing", "Automation", "Revenue Generation"]
+      tags: ["Email Marketing", "Automation", "Revenue Generation"],
+      driveLink: "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR"
     },
     {
       id: 5,
       title: "Influencer Partnership Campaign",
       category: "Influencer",
       description: "Collaborated with 20+ influencers for brand awareness",
-      image: "/lovable-uploads/d2205550-ae2d-4487-88e8-67c35e4a87dc.png",
+      image: "/src/assets/influencer-marketing-service.jpg",
       metrics: { reach: "2M+", engagement: "+180%", sales: "+90%" },
-      tags: ["Influencer Marketing", "Brand Awareness", "Partnerships"]
+      tags: ["Influencer Marketing", "Brand Awareness", "Partnerships"],
+      driveLink: "https://drive.google.com/drive/folders/1EIBGfD986_FNdrOfK7aQ7LJpknXGruqP"
     },
     {
       id: 6,
       title: "Complete Brand Overhaul",
       category: "Branding",
       description: "Rebranded startup leading to 400% increase in brand recognition",
-      image: "/lovable-uploads/d2205550-ae2d-4487-88e8-67c35e4a87dc.png",
+      image: "/src/assets/branding-service.jpg",
       metrics: { recognition: "+400%", trust: "+250%", sales: "+150%" },
-      tags: ["Branding", "Design", "Strategy"]
+      tags: ["Branding", "Design", "Strategy"],
+      driveLink: "https://drive.google.com/drive/folders/1EIBGfD986_FNdrOfK7aQ7LJpknXGruqP"
     }
   ];
 
@@ -137,15 +143,18 @@ const ModernPortfolioSection = () => {
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <motion.div
+                    <motion.a
+                      href={item.driveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       initial={{ opacity: 0, y: 20 }}
                       whileHover={{ opacity: 1, y: 0 }}
                       className="absolute bottom-4 right-4"
                     >
-                      <div className="bg-white/90 p-2 rounded-full">
-                        <ExternalLink className="w-4 h-4 text-primary" />
+                      <div className="bg-white/90 p-2 rounded-full hover:bg-accent hover:text-white transition-colors duration-300">
+                        <ExternalLink className="w-4 h-4" />
                       </div>
-                    </motion.div>
+                    </motion.a>
                   </div>
                   
                   <CardContent className="p-6">
