@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const ModernNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,9 +17,14 @@ const ModernNavigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to homepage with hash
+      window.location.href = `/#${sectionId}`;
     }
   };
 
@@ -33,13 +41,13 @@ const ModernNavigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img
               src="/lovable-uploads/ce88c082-961b-4ed5-a733-1041f86b42e8.png"
               alt="Adory Creatives"
               className="h-10 w-auto"
             />
-          </div>
+          </Link>
 
           {/* Navigation Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -67,12 +75,12 @@ const ModernNavigation = () => {
             >
               Blog
             </button>
-            <button
-              onClick={() => scrollToSection("contact")}
+            <Link
+              to="/contact"
               className="text-foreground hover:text-primary transition-colors"
             >
               Contact
-            </button>
+            </Link>
           </div>
 
           {/* Right Side Buttons */}
