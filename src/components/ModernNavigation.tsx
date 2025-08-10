@@ -83,15 +83,6 @@ const ModernNavigation = () => {
             </Link>
           </div>
 
-          {/* Right Side Buttons */}
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden md:block">
-              Login
-            </Button>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              Get Started
-            </Button>
-          </div>
         </div>
       </div>
     </motion.nav>

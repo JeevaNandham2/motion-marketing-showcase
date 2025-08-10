@@ -88,7 +88,7 @@ const HangingCardsCarousel = () => {
       </div>
 
       {/* Hanging Cards Container */}
-      <div className="relative h-96 overflow-hidden">
+      <div className="relative h-[500px] overflow-hidden">
         {/* Hanging Wire */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
         
@@ -161,15 +161,15 @@ const HangingCardsCarousel = () => {
                         {service.description}
                       </p>
                       
-                      <div className="mt-6">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="w-full py-3 bg-gradient-to-r from-accent to-primary text-accent-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 z-10 relative"
-                        >
-                          Learn More
-                        </motion.button>
-                      </div>
+                       <div className="mt-6 relative z-20">
+                         <motion.button
+                           whileHover={{ scale: 1.05 }}
+                           whileTap={{ scale: 0.95 }}
+                           className="w-full py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 relative z-30"
+                         >
+                           Learn More
+                         </motion.button>
+                       </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -180,8 +180,8 @@ const HangingCardsCarousel = () => {
       </div>
 
       {/* Gradient Overlays */}
-      <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
-      <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
+      <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-background to-transparent z-5"></div>
+      <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background to-transparent z-5"></div>
     </section>
   );
 };
