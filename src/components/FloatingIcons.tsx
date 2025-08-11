@@ -32,27 +32,79 @@ const FloatingIcons = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      {/* Enhanced background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20"></div>
+      
+      {/* Floating particles */}
+      {Array.from({ length: 20 }).map((_, i) => (
+        <motion.div
+          key={`particle-${i}`}
+          className="absolute w-1 h-1 bg-accent/20 rounded-full"
+          style={{ 
+            left: `${Math.random() * 100}%`, 
+            top: `${Math.random() * 100}%` 
+          }}
+          animate={{
+            y: [0, -100, 0],
+            opacity: [0, 1, 0]
+          }}
+          transition={{
+            duration: 6 + Math.random() * 4,
+            repeat: Infinity,
+            delay: Math.random() * 5,
+            ease: "easeInOut"
+          }}
+        />
+      ))}
+      
+      {/* Enhanced animated icons */}
       {icons.map(({ Icon, delay, x, y }, index) => (
         <motion.div
           key={index}
-          className="absolute text-accent/10"
+          className="absolute text-accent/15"
           style={{ left: x, top: y }}
           initial={{ opacity: 0, scale: 0, rotate: 0 }}
           animate={{ 
-            opacity: [0.1, 0.3, 0.1],
-            scale: [0.8, 1.2, 0.8],
+            opacity: [0.1, 0.4, 0.1],
+            scale: [0.6, 1.4, 0.6],
             rotate: [0, 360, 0],
-            y: [-20, 20, -20]
+            y: [-30, 30, -30],
+            x: [-10, 10, -10]
           }}
           transition={{
-            duration: 8 + (index % 3) * 2,
+            duration: 10 + (index % 4) * 2,
             repeat: Infinity,
             delay: delay,
             ease: "easeInOut"
           }}
         >
-          <Icon className="w-8 h-8 md:w-12 md:h-12" />
+          <Icon className="w-10 h-10 md:w-16 md:h-16 filter drop-shadow-lg" />
         </motion.div>
+      ))}
+      
+      {/* Glowing orbs */}
+      {Array.from({ length: 8 }).map((_, i) => (
+        <motion.div
+          key={`orb-${i}`}
+          className="absolute rounded-full bg-gradient-to-r from-primary/10 to-accent/10 blur-xl"
+          style={{ 
+            left: `${20 + (i * 15)}%`, 
+            top: `${10 + (i * 10)}%`,
+            width: `${60 + Math.random() * 40}px`,
+            height: `${60 + Math.random() * 40}px`
+          }}
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.8, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 8 + Math.random() * 4,
+            repeat: Infinity,
+            delay: i * 0.5,
+            ease: "easeInOut"
+          }}
+        />
       ))}
     </div>
   );

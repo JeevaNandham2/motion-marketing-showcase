@@ -64,12 +64,6 @@ const ModernNavigation = () => {
               Portfolio
             </button>
             <button
-              onClick={() => scrollToSection("pricing")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Pricing
-            </button>
-            <button
               onClick={() => scrollToSection("blog")}
               className="text-foreground hover:text-primary transition-colors"
             >

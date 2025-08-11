@@ -6,38 +6,38 @@
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 8%;
+    /* Brand Colors - Dark Theme */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 8%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Creative Black Primary */
-    --primary: 0 0% 8%;
-    --primary-foreground: 0 0% 98%;
+    /* Electric Primary */
+    --primary: 259 100% 65%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Subtle Gray Secondary */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 8%;
+    /* Dark Secondary */
+    --secondary: 222 47% 8%;
+    --secondary-foreground: 210 40% 98%;
 
-    /* Muted Tones */
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 45%;
+    /* Dark Muted Tones */
+    --muted: 222 47% 8%;
+    --muted-foreground: 215.4 16.3% 56.9%;
 
-    /* Adory Red Accent */
-    --accent: 4 76% 58%;
-    --accent-foreground: 0 0% 98%;
+    /* Neon Green Accent */
+    --accent: 142 71% 45%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 92%;
-    --ring: 4 76% 58%;
+    --border: 222 47% 12%;
+    --input: 222 47% 12%;
+    --ring: 259 100% 65%;
 
     --radius: 0.75rem;
     
