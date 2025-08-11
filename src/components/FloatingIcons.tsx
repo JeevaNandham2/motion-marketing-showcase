@@ -57,12 +57,17 @@ const FloatingIcons = () => {
         />
       ))}
       
-      {/* Enhanced animated icons */}
+      {/* Enhanced animated icons with red/orange theme */}
       {icons.map(({ Icon, delay, x, y }, index) => (
         <motion.div
           key={index}
-          className="absolute text-accent/15"
-          style={{ left: x, top: y }}
+          className="absolute"
+          style={{ 
+            left: x, 
+            top: y,
+            color: index % 2 === 0 ? 'hsl(0 84% 60%)' : 'hsl(25 95% 53%)',
+            opacity: 0.15
+          }}
           initial={{ opacity: 0, scale: 0, rotate: 0 }}
           animate={{ 
             opacity: [0.1, 0.4, 0.1],
@@ -77,31 +82,39 @@ const FloatingIcons = () => {
             delay: delay,
             ease: "easeInOut"
           }}
+          whileHover={{ scale: 1.8, opacity: 0.6 }}
         >
-          <Icon className="w-10 h-10 md:w-16 md:h-16 filter drop-shadow-lg" />
+          <Icon className="w-12 h-12 md:w-20 md:h-20 filter drop-shadow-[0_0_10px_currentColor]" />
         </motion.div>
       ))}
       
-      {/* Glowing orbs */}
-      {Array.from({ length: 8 }).map((_, i) => (
+      {/* Enhanced glowing orbs with logo colors */}
+      {Array.from({ length: 12 }).map((_, i) => (
         <motion.div
           key={`orb-${i}`}
-          className="absolute rounded-full bg-gradient-to-r from-primary/10 to-accent/10 blur-xl"
+          className="absolute rounded-full blur-2xl"
           style={{ 
-            left: `${20 + (i * 15)}%`, 
-            top: `${10 + (i * 10)}%`,
-            width: `${60 + Math.random() * 40}px`,
-            height: `${60 + Math.random() * 40}px`
+            left: `${Math.random() * 100}%`, 
+            top: `${Math.random() * 100}%`,
+            width: `${80 + Math.random() * 60}px`,
+            height: `${80 + Math.random() * 60}px`,
+            background: i % 3 === 0 
+              ? 'radial-gradient(circle, hsl(0 84% 60% / 0.3) 0%, transparent 70%)'
+              : i % 3 === 1 
+              ? 'radial-gradient(circle, hsl(25 95% 53% / 0.3) 0%, transparent 70%)'
+              : 'radial-gradient(circle, hsl(0 0% 20% / 0.3) 0%, transparent 70%)'
           }}
           animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3],
-            rotate: [0, 180, 360]
+            scale: [1, 2, 1],
+            opacity: [0.2, 0.6, 0.2],
+            rotate: [0, 180, 360],
+            x: [-20, 20, -20],
+            y: [-20, 20, -20]
           }}
           transition={{
-            duration: 8 + Math.random() * 4,
+            duration: 12 + Math.random() * 6,
             repeat: Infinity,
-            delay: i * 0.5,
+            delay: i * 0.8,
             ease: "easeInOut"
           }}
         />
