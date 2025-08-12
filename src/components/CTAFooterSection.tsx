@@ -129,8 +129,60 @@ const CTAFooterSection = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-16">
-        <div className="container mx-auto px-6">
+      <footer className="bg-black text-white py-16 relative overflow-hidden">
+        {/* Black Animated Background */}
+        <div className="absolute inset-0">
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+              rotate: [0, 360],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{
+              scale: [1.3, 1, 1.3],
+              rotate: [360, 0],
+              opacity: [0.2, 0.4, 0.2],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl"
+          />
+          
+          {/* Floating particles */}
+          {Array.from({ length: 8 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-primary rounded-full"
+              style={{
+                left: `${10 + i * 12}%`,
+                top: `${15 + i * 8}%`,
+              }}
+              animate={{
+                y: [-30, 30, -30],
+                opacity: [0.2, 1, 0.2],
+                scale: [0.5, 1.5, 0.5],
+              }}
+              transition={{
+                duration: 5 + i,
+                repeat: Infinity,
+                delay: i * 0.7,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             {/* Brand Section */}
             <motion.div
@@ -146,7 +198,7 @@ const CTAFooterSection = () => {
                   className="h-12 w-auto"
                 />
               </div>
-              <p className="text-primary-foreground/80 mb-6 max-w-md">
+              <p className="text-white/80 mb-6 max-w-md">
                 We're a full-service digital marketing agency dedicated to helping businesses 
                 grow their online presence and achieve measurable results.
               </p>
@@ -163,7 +215,7 @@ const CTAFooterSection = () => {
                     key={social.label}
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
-                    className="bg-primary-foreground/10 p-3 rounded-full hover:bg-accent transition-colors duration-300"
+                    className="bg-white/10 p-3 rounded-full hover:bg-accent transition-colors duration-300"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5" />
@@ -189,7 +241,7 @@ const CTAFooterSection = () => {
                   "Brand Strategy"
                 ].map((service) => (
                   <li key={service}>
-                    <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors duration-300">
+                    <a href="#" className="text-white/80 hover:text-accent transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -207,15 +259,15 @@ const CTAFooterSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-accent" />
-                  <span className="text-primary-foreground/80">hello@adorycreatives.com</span>
+                  <span className="text-white/80">hello@adorycreatives.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
-                  <span className="text-primary-foreground/80">+1 (555) 123-4567</span>
+                  <span className="text-white/80">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-accent" />
-                  <span className="text-primary-foreground/80">New York, NY 10001</span>
+                  <span className="text-white/80">New York, NY 10001</span>
                 </div>
               </div>
             </motion.div>
@@ -226,19 +278,19 @@ const CTAFooterSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center"
+            className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center"
           >
-            <p className="text-primary-foreground/60 text-sm">
+            <p className="text-white/60 text-sm">
               © 2024 Adory Creatives. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent text-sm transition-colors duration-300">
+              <a href="#" className="text-white/60 hover:text-accent text-sm transition-colors duration-300">
                 Privacy Policy
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent text-sm transition-colors duration-300">
+              <a href="#" className="text-white/60 hover:text-accent text-sm transition-colors duration-300">
                 Terms of Service
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent text-sm transition-colors duration-300">
+              <a href="#" className="text-white/60 hover:text-accent text-sm transition-colors duration-300">
                 Cookie Policy
               </a>
             </div>

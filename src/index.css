@@ -125,7 +125,7 @@
   }
   
   * {
-    scroll-behavior: smooth;
+    scroll-behavior: inherit;
   }
 
   body {

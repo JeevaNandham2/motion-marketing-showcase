@@ -40,8 +40,8 @@ const ModernNavigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo with Agency Name */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          {/* Enhanced Logo without text */}
+          <Link to="/" className="flex items-center group">
             <div className="relative">
               <motion.div 
                 className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-30"
@@ -53,25 +53,6 @@ const ModernNavigation = () => {
                 alt="Adory Creatives"
                 className="relative h-12 w-auto group-hover:scale-110 transition-transform duration-300"
               />
-            </div>
-            <div className="flex flex-col">
-              <motion.span 
-                className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
-                animate={{ 
-                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "linear" 
-                }}
-                style={{ backgroundSize: "200% 100%" }}
-              >
-                Adory Creatives
-              </motion.span>
-              <span className="text-xs text-muted-foreground tracking-widest uppercase">
-                Digital Marketing
-              </span>
             </div>
           </Link>
 
