@@ -14,7 +14,7 @@ const AnimatedServiceSections = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="text-4xl font-bold">Search Engine Optimization</h3>
+            <h3 className="text-4xl font-bold text-foreground">Search Engine Optimization</h3>
             <p className="text-xl text-muted-foreground">
               Dominate search results and drive organic traffic to your website with our proven SEO strategies.
             </p>

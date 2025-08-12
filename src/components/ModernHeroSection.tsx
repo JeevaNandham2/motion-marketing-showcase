@@ -126,27 +126,6 @@ const ModernHeroSection = () => {
           SEO, Social Media, Paid Ads & More — All in One Place
         </motion.p>
 
-        {/* Enhanced CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-        >
-          <motion.button
-            onClick={() => scrollToSection('services')}
-            className="relative bg-gradient-to-r from-primary to-accent text-white px-12 py-4 rounded-full font-semibold text-lg overflow-hidden group animate-pulse-glow"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="relative z-10">Explore Our Services</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-accent to-primary"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: "0%" }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.button>
-        </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
