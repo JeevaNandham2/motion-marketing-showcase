@@ -79,8 +79,31 @@ const ModernHeroSection = () => {
           </motion.div>
         </motion.div>
 
+        {/* Agency Name */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-4"
+        >
+          <motion.h1 
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
+            animate={{ 
+              backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+            }}
+            transition={{ 
+              duration: 5, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+            style={{ backgroundSize: "200% 100%" }}
+          >
+            ADORY CREATIVES
+          </motion.h1>
+        </motion.div>
+
         {/* Enhanced Main Headline */}
-        <motion.h1 
+        <motion.h2 
           className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,7 +137,7 @@ const ModernHeroSection = () => {
           >
             Excellence
           </motion.span>
-        </motion.h1>
+        </motion.h2>
 
         {/* Subheading */}
         <motion.p

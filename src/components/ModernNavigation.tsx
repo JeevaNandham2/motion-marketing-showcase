@@ -40,13 +40,39 @@ const ModernNavigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img
-              src="/lovable-uploads/ce88c082-961b-4ed5-a733-1041f86b42e8.png"
-              alt="Adory Creatives"
-              className="h-10 w-auto"
-            />
+          {/* Enhanced Logo with Agency Name */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <motion.div 
+                className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-30"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
+              <img
+                src="/lovable-uploads/ce88c082-961b-4ed5-a733-1041f86b42e8.png"
+                alt="Adory Creatives"
+                className="relative h-12 w-auto group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex flex-col">
+              <motion.span 
+                className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
+                animate={{ 
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{ 
+                  duration: 4, 
+                  repeat: Infinity, 
+                  ease: "linear" 
+                }}
+                style={{ backgroundSize: "200% 100%" }}
+              >
+                Adory Creatives
+              </motion.span>
+              <span className="text-xs text-muted-foreground tracking-widest uppercase">
+                Digital Marketing
+              </span>
+            </div>
           </Link>
 
           {/* Navigation Menu */}

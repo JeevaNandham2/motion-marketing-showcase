@@ -131,6 +131,12 @@
   body {
     @apply bg-background text-foreground font-inter;
     overflow-x: hidden;
+    cursor: url('/src/assets/cursor-icon.png') 16 16, auto;
+  }
+  
+  /* Custom cursor for interactive elements */
+  button, a, [role="button"] {
+    cursor: url('/src/assets/cursor-icon.png') 16 16, pointer;
   }
   
   h1, h2, h3, h4, h5, h6 {
