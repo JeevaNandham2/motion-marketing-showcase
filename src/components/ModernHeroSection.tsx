@@ -102,7 +102,7 @@ const ModernHeroSection = () => {
           </motion.h1>
         </motion.div>
 
-        {/* Enhanced Main Headline */}
+        {/* Enhanced Main Headline - SEO Optimized */}
         <motion.h2 
           className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
           initial={{ opacity: 0, y: 30 }}
@@ -115,10 +115,10 @@ const ModernHeroSection = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Digital Marketing
+            Digital Marketing Agency
           </motion.span>
           <motion.span 
-            className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_100%] animate-pulse-glow block"
+            className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_100%] animate-pulse-glow block text-3xl md:text-5xl lg:text-6xl"
             initial={{ x: 100, opacity: 0 }}
             animate={{ 
               x: 0, 
@@ -135,18 +135,19 @@ const ModernHeroSection = () => {
               }
             }}
           >
-            Excellence
+            Chennai & Kilpauk
           </motion.span>
         </motion.h2>
 
-        {/* Subheading */}
+        {/* SEO Optimized Subheading */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto"
+          className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto"
         >
-          SEO, Social Media, Paid Ads & More — All in One Place
+          Premier SEO Services, Social Media Marketing, Google Ads & Web Design in Chennai. 
+          <span className="text-primary font-semibold"> 300% Growth Guaranteed</span> for Local Businesses in Kilpauk & Beyond
         </motion.p>
 
 

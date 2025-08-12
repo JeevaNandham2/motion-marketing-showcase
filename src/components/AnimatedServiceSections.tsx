@@ -14,9 +14,10 @@ const AnimatedServiceSections = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h3 className="text-4xl font-bold text-foreground">Search Engine Optimization</h3>
+            <h3 className="text-4xl font-bold text-foreground">SEO Services Chennai & Kilpauk</h3>
             <p className="text-xl text-muted-foreground">
-              Dominate search results and drive organic traffic to your website with our proven SEO strategies.
+              Dominate Chennai search results and drive organic traffic to your website with our proven local SEO strategies. 
+              Helping businesses in Kilpauk, T.Nagar & Anna Nagar rank #1 on Google.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
@@ -117,9 +118,10 @@ const AnimatedServiceSections = () => {
             transition={{ duration: 0.8 }}
             className="order-1 lg:order-2 space-y-6"
           >
-            <h3 className="text-4xl font-bold">Social Media Management</h3>
+            <h3 className="text-4xl font-bold">Social Media Marketing Chennai</h3>
             <p className="text-xl text-muted-foreground">
-              Build meaningful connections with your audience across all social platforms.
+              Build meaningful connections with your Chennai audience across all social platforms. 
+              Specialized in local community engagement for Kilpauk and surrounding areas.
             </p>
           </motion.div>
         </div>

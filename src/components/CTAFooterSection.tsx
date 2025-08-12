@@ -199,8 +199,8 @@ const CTAFooterSection = () => {
                 />
               </div>
               <p className="text-white/80 mb-6 max-w-md">
-                We're a full-service digital marketing agency dedicated to helping businesses 
-                grow their online presence and achieve measurable results.
+                We're a full-service digital marketing agency in Chennai dedicated to helping businesses 
+                in Kilpauk and beyond grow their online presence and achieve measurable results.
               </p>
               
               {/* Social Links */}
@@ -233,12 +233,12 @@ const CTAFooterSection = () => {
               <h4 className="text-lg font-semibold mb-6">Services</h4>
               <ul className="space-y-3">
                 {[
-                  "Search Engine Optimization",
-                  "Social Media Marketing",
-                  "Pay-Per-Click Advertising",
-                  "Content Marketing",
-                  "Email Marketing",
-                  "Brand Strategy"
+                  "SEO Services Chennai",
+                  "Social Media Marketing Kilpauk", 
+                  "Google Ads Management Chennai",
+                  "Web Design & Development",
+                  "Email Marketing Campaigns",
+                  "Local Business Marketing"
                 ].map((service) => (
                   <li key={service}>
                     <a href="#" className="text-white/80 hover:text-accent transition-colors duration-300">
@@ -263,11 +263,11 @@ const CTAFooterSection = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
-                  <span className="text-white/80">+1 (555) 123-4567</span>
+                  <span className="text-white/80">+91-44-1234-5678</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-accent" />
-                  <span className="text-white/80">New York, NY 10001</span>
+                  <span className="text-white/80">123 Main Street, Kilpauk, Chennai - 600010</span>
                 </div>
               </div>
             </motion.div>

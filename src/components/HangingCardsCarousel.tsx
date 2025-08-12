@@ -12,8 +12,8 @@ const HangingCardsCarousel = () => {
   const services = [
     {
       id: 1,
-      title: "SEO",
-      description: "Boost your search rankings with data-driven optimization strategies",
+      title: "SEO Services Chennai",
+      description: "Boost your Chennai business rankings with data-driven SEO optimization strategies",
       icon: Search,
       image: seoImage,
       color: "from-blue-400 to-blue-600",
@@ -21,8 +21,8 @@ const HangingCardsCarousel = () => {
     },
     {
       id: 2,
-      title: "Social Media Marketing",
-      description: "Engage your audience across all social platforms",
+      title: "Social Media Marketing Chennai",
+      description: "Engage your Chennai audience across all social platforms with targeted campaigns",
       icon: Share2,
       image: socialMediaImage,
       color: "from-purple-400 to-purple-600",
@@ -30,8 +30,8 @@ const HangingCardsCarousel = () => {
     },
     {
       id: 3,
-      title: "Google Ads",
-      description: "Targeted advertising campaigns that convert",
+      title: "Google Ads Chennai",
+      description: "Targeted PPC advertising campaigns that convert for Chennai businesses",
       icon: Target,
       image: googleAdsImage,
       color: "from-red-400 to-red-600",
@@ -39,8 +39,8 @@ const HangingCardsCarousel = () => {
     },
     {
       id: 4,
-      title: "Email Marketing",
-      description: "Direct customer communication that drives results",
+      title: "Email Marketing Kilpauk",
+      description: "Direct customer communication that drives results for Kilpauk businesses",
       icon: Mail,
       image: emailMarketingImage,
       color: "from-green-400 to-green-600",
@@ -48,8 +48,8 @@ const HangingCardsCarousel = () => {
     },
     {
       id: 5,
-      title: "Influencer Marketing",
-      description: "Partner with key voices in your industry",
+      title: "Influencer Marketing Chennai",
+      description: "Partner with key voices in Chennai to amplify your brand reach",
       icon: Users,
       image: influencerMarketingImage,
       color: "from-yellow-400 to-yellow-600",
@@ -57,8 +57,8 @@ const HangingCardsCarousel = () => {
     },
     {
       id: 6,
-      title: "Branding",
-      description: "Build your brand identity that stands out",
+      title: "Web Design Kilpauk",
+      description: "Build your professional brand identity that stands out in Kilpauk market",
       icon: Palette,
       image: brandingImage,
       color: "from-pink-400 to-pink-600",
@@ -79,10 +79,11 @@ const HangingCardsCarousel = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Digital Marketing Services
+            Digital Marketing Services in Chennai & Kilpauk
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions to grow your business online
+            Comprehensive SEO, Social Media & Google Ads solutions to grow your Chennai business online. 
+            Trusted by 500+ local businesses in Kilpauk, T.Nagar & Anna Nagar.
           </p>
         </motion.div>
       </div>
