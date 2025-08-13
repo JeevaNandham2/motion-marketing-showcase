@@ -12,51 +12,51 @@ const ModernHeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-accent/5 relative overflow-hidden">
-      {/* Enhanced Animated Background Elements */}
+      {/* Mobile-Optimized Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ 
             rotate: [0, 360],
-            scale: [1, 1.2, 1],
+            scale: [1, 1.1, 1],
           }}
           transition={{ 
-            duration: 20, 
+            duration: 30, 
             repeat: Infinity, 
             ease: "linear" 
           }}
-          className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl"
+          className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-primary/15 to-accent/15 rounded-full blur-3xl will-change-transform"
         />
         <motion.div
           animate={{ 
             rotate: [360, 0],
-            scale: [1.2, 0.8, 1.2],
+            scale: [1.1, 0.9, 1.1],
           }}
           transition={{ 
-            duration: 25, 
+            duration: 35, 
             repeat: Infinity, 
             ease: "linear" 
           }}
-          className="absolute -bottom-1/2 -left-1/2 w-3/4 h-3/4 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl"
+          className="absolute -bottom-1/2 -left-1/2 w-3/4 h-3/4 bg-gradient-to-tr from-accent/15 to-primary/15 rounded-full blur-3xl will-change-transform"
         />
         
-        {/* Additional animated elements */}
-        {Array.from({ length: 6 }).map((_, i) => (
+        {/* Mobile-Optimized animated particles */}
+        {Array.from({ length: 4 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full"
+            className="absolute w-1.5 h-1.5 bg-gradient-to-r from-primary to-accent rounded-full will-change-transform"
             style={{
-              left: `${20 + i * 15}%`,
-              top: `${10 + i * 12}%`,
+              left: `${25 + i * 20}%`,
+              top: `${15 + i * 15}%`,
             }}
             animate={{
-              y: [-20, 20, -20],
-              opacity: [0.3, 1, 0.3],
-              scale: [0.5, 1.5, 0.5],
+              y: [-10, 10, -10],
+              opacity: [0.4, 0.8, 0.4],
+              scale: [0.8, 1.2, 0.8],
             }}
             transition={{
-              duration: 4 + i,
+              duration: 6 + i * 0.5,
               repeat: Infinity,
-              delay: i * 0.5,
+              delay: i * 0.8,
               ease: "easeInOut"
             }}
           />

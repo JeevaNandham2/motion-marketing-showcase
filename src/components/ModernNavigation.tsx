@@ -40,19 +40,29 @@ const ModernNavigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo without text */}
+          {/* Enhanced Logo */}
           <Link to="/" className="flex items-center group">
             <div className="relative">
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-lg opacity-30"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 3, repeat: Infinity }}
+                className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 rounded-xl blur-xl opacity-50"
+                animate={{ 
+                  scale: [1, 1.1, 1],
+                  opacity: [0.3, 0.6, 0.3]
+                }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               />
-              <img
-                src="/lovable-uploads/ce88c082-961b-4ed5-a733-1041f86b42e8.png"
-                alt="Adory Creatives"
-                className="relative h-12 w-auto group-hover:scale-110 transition-transform duration-300"
-              />
+              <div className="relative bg-gradient-to-br from-background/90 to-card/90 backdrop-blur-sm rounded-xl p-3 border border-primary/20">
+                <img
+                  src="/lovable-uploads/ce88c082-961b-4ed5-a733-1041f86b42e8.png"
+                  alt="Adory Creatives Digital Marketing Agency"
+                  className="relative h-8 w-auto group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
             </div>
           </Link>
 
