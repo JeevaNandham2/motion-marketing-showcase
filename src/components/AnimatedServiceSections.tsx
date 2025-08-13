@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Instagram, Target, PenTool, Mail, Heart } from "lucide-react";
+import { TrendingUp, Instagram, Target, PenTool, Mail, Heart, Facebook, Twitter, Linkedin } from "lucide-react";
 
 const AnimatedServiceSections = () => {
   return (
@@ -84,31 +84,39 @@ const AnimatedServiceSections = () => {
             className="order-2 lg:order-1"
           >
             <div className="grid grid-cols-2 gap-4">
-              {["Instagram", "Facebook", "Twitter", "LinkedIn"].map((platform, index) => (
-                <motion.div
-                  key={platform}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="bg-white p-4 rounded-xl shadow-lg border"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <Instagram className="w-6 h-6 text-pink-500" />
-                    <span className="font-semibold">{platform}</span>
-                  </div>
-                  <div className="space-y-2">
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
-                      className="flex gap-1"
-                    >
-                      <Heart className="w-4 h-4 text-red-500" />
-                      <span className="text-sm">1.2k</span>
-                    </motion.div>
-                  </div>
-                </motion.div>
-              ))}
+              {[
+                { name: "Instagram", icon: Instagram, color: "text-pink-500", bgColor: "bg-pink-50" },
+                { name: "Facebook", icon: Facebook, color: "text-blue-600", bgColor: "bg-blue-50" },
+                { name: "Twitter", icon: Twitter, color: "text-sky-500", bgColor: "bg-sky-50" },
+                { name: "LinkedIn", icon: Linkedin, color: "text-blue-700", bgColor: "bg-blue-50" }
+              ].map((platform, index) => {
+                const IconComponent = platform.icon;
+                return (
+                  <motion.div
+                    key={platform.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ scale: 1.05, rotate: 2 }}
+                    className={`${platform.bgColor} p-4 rounded-xl shadow-lg border`}
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <IconComponent className={`w-6 h-6 ${platform.color}`} />
+                      <span className="font-semibold">{platform.name}</span>
+                    </div>
+                    <div className="space-y-2">
+                      <motion.div
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                        className="flex gap-1"
+                      >
+                        <Heart className="w-4 h-4 text-red-500" />
+                        <span className="text-sm">1.2k</span>
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
           
@@ -269,6 +277,7 @@ const AnimatedServiceSections = () => {
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
+                  onClick={() => window.location.href = '/contact'}
                   animate={{
                     boxShadow: [
                       "0 0 0 0 rgba(59, 130, 246, 0.4)",

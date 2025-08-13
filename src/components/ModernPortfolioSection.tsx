@@ -14,31 +14,31 @@ const ModernPortfolioSection = () => {
 
   const portfolioItems = [
     {
-      title: "E-commerce Revolution",
-      category: "E-commerce",
-      description: "Transformed online shopping experience with AI-powered recommendations and seamless user interface",
+      title: "Videography Projects",
+      category: "Videography",
+      description: "Professional video production showcasing brand stories and marketing campaigns",
       image: portfolioEcommerce,
-      metrics: { conversion: "+85%", revenue: "$2.4M", users: "50K+" },
-      tags: ["React", "AI/ML", "Stripe", "Redux"],
-      driveLink: "https://drive.google.com/drive/folders/1abc123def456ghi789"
+      metrics: { projects: "50+", views: "2M+", clients: "25+" },
+      tags: ["4K Video", "Drone Shots", "Post-Production", "Color Grading"],
+      driveLink: "https://drive.google.com/drive/folders/14tWYjvU3puIZdWug1or6Q3CHsAk-I2Qx"
     },
     {
-      title: "Corporate Digital Transformation",
-      category: "Business",
-      description: "Complete digital overhaul for enterprise client with modern web solutions and brand enhancement",
+      title: "Motion Graphics Design",
+      category: "Motion Graphics",
+      description: "Dynamic animated graphics and visual effects for digital marketing campaigns",
       image: portfolioCorporate,
-      metrics: { efficiency: "+92%", engagement: "+78%", leads: "+156%" },
-      tags: ["Next.js", "TypeScript", "CMS", "Analytics"],
-      driveLink: "https://drive.google.com/drive/folders/2def456ghi789jkl012"
+      metrics: { animations: "100+", engagement: "+78%", brands: "30+" },
+      tags: ["After Effects", "Cinema 4D", "Animation", "Visual Effects"],
+      driveLink: "https://drive.google.com/drive/folders/1EIBGfD986_FNdrOfK7aQ7LJpknXGruqP"
     },
     {
-      title: "HealthTech Mobile Platform",
-      category: "Healthcare",
-      description: "Revolutionary healthcare app connecting patients with providers through telemedicine solutions",
+      title: "Graphics Design Portfolio",
+      category: "Graphics Design",
+      description: "Creative visual designs for branding, marketing materials and digital campaigns",
       image: portfolioHealthcare,
-      metrics: { satisfaction: "98%", consultations: "25K+", doctors: "500+" },
-      tags: ["React Native", "WebRTC", "HIPAA", "Firebase"],
-      driveLink: "https://drive.google.com/drive/folders/3ghi789jkl012mno345"
+      metrics: { designs: "200+", brands: "50+", campaigns: "75+" },
+      tags: ["Logo Design", "Branding", "Print Design", "Digital Graphics"],
+      driveLink: "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR"
     },
     {
       title: "Real Estate Innovation",
@@ -69,7 +69,7 @@ const ModernPortfolioSection = () => {
     }
   ];
 
-  const categories = ["All", "E-commerce", "Business", "Healthcare", "Real Estate", "SaaS", "Food & Beverage"];
+  const categories = ["All", "Videography", "Motion Graphics", "Graphics Design", "Real Estate", "SaaS", "Food & Beverage"];
 
   const filteredItems = activeFilter === "All" 
     ? portfolioItems 
@@ -262,6 +262,7 @@ const ModernPortfolioSection = () => {
           <motion.button
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.location.href = '/contact'}
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-4 rounded-full font-semibold text-lg shadow-[0_0_30px_hsl(0_84%_60%/0.3)] hover:shadow-[0_0_50px_hsl(0_84%_60%/0.5)] transition-all duration-300 relative overflow-hidden group animate-pulse-glow"
           >
             <span className="relative z-10">Start Your Project Today</span>

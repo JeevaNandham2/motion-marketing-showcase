@@ -80,8 +80,9 @@ const CTAFooterSection = () => {
                       required
                     />
                     <Button
-                      type="submit"
+                      type="button"
                       size="lg"
+                      onClick={() => window.location.href = '/contact'}
                       className="h-14 px-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg group"
                     >
                       Get Started Free
@@ -259,7 +260,7 @@ const CTAFooterSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-accent" />
-                  <span className="text-white/80">hello@adorycreatives.com</span>
+                  <span className="text-white/80">adorycreatives@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
@@ -267,7 +268,7 @@ const CTAFooterSection = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-accent" />
-                  <span className="text-white/80">123 Main Street, Kilpauk, Chennai - 600010</span>
+                  <span className="text-white/80">1st cross St, Kilpauk garden colony, Kilpauk, Chennai, Tamil Nadu 600010</span>
                 </div>
               </div>
             </motion.div>
