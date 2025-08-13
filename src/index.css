@@ -122,10 +122,18 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
   
   * {
     scroll-behavior: inherit;
+  }
+  
+  /* Smooth scrolling for all devices */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {

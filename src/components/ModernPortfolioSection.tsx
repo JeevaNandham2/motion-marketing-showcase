@@ -189,14 +189,12 @@ const ModernPortfolioSection = () => {
                       transition={{ delay: 0.2 }}
                       className="absolute bottom-4 right-4"
                     >
-                      <a
-                        href={item.driveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-gradient-to-r from-primary to-accent text-white p-3 rounded-full hover:shadow-[0_0_20px_hsl(0_84%_60%/0.5)] transition-all duration-300 group/link"
+                      <button
+                        onClick={() => window.open(item.driveLink, '_blank', 'noopener,noreferrer')}
+                        className="bg-gradient-to-r from-primary to-accent text-white p-3 rounded-full hover:shadow-[0_0_20px_hsl(187_84%_55%/0.5)] transition-all duration-300 group/link"
                       >
                         <ExternalLink className="w-5 h-5 group-hover/link:rotate-12 transition-transform" />
-                      </a>
+                      </button>
                     </motion.div>
                   </div>
                   
@@ -262,8 +260,15 @@ const ModernPortfolioSection = () => {
           <motion.button
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => window.location.href = '/contact'}
-            className="bg-gradient-to-r from-primary to-accent text-white px-12 py-4 rounded-full font-semibold text-lg shadow-[0_0_30px_hsl(0_84%_60%/0.3)] hover:shadow-[0_0_50px_hsl(0_84%_60%/0.5)] transition-all duration-300 relative overflow-hidden group animate-pulse-glow"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                window.location.href = '/contact';
+              }
+            }}
+            className="bg-gradient-to-r from-primary to-accent text-white px-12 py-4 rounded-full font-semibold text-lg shadow-[0_0_30px_hsl(187_84%_55%/0.3)] hover:shadow-[0_0_50px_hsl(187_84%_55%/0.5)] transition-all duration-300 relative overflow-hidden group animate-pulse-glow"
           >
             <span className="relative z-10">Start Your Project Today</span>
             <motion.div
