@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			screens: {
+				'xs': '475px',
+			},
 			fontFamily: {
 				'helvetica': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
 				'inter': ['Inter', 'system-ui', 'sans-serif'],

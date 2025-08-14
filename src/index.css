@@ -144,6 +144,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     will-change: scroll-position;
+    /* GPU acceleration for smooth scrolling */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
   
   /* Custom cursor for interactive elements */
@@ -196,6 +200,25 @@
     .animate-pulse-glow {
       animation: pulse-glow 4s ease-in-out infinite;
       transform: translateZ(0);
+    }
+    
+    /* Mobile-specific optimizations */
+    * {
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+    
+    /* Lazy loading support */
+    img[loading="lazy"] {
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    /* Reduce motion for battery saving */
+    @media (prefers-reduced-motion: reduce) {
+      .animate-float,
+      .animate-pulse-glow {
+        animation-duration: 0s !important;
+      }
     }
   }
 
