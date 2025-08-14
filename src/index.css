@@ -123,16 +123,35 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    /* Mobile scroll optimization */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
   }
   
   * {
     scroll-behavior: inherit;
   }
   
-  /* Smooth scrolling for all devices */
+  /* Ultra-smooth scrolling for all devices */
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
+    }
+  }
+  
+  /* Mobile-specific scroll optimizations */
+  @media (max-width: 768px) {
+    html, body {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: none;
+      scroll-behavior: smooth;
+    }
+    
+    * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
   }
 
@@ -148,6 +167,11 @@
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
+    /* Mobile scroll performance */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    /* Prevent momentum scrolling issues */
+    touch-action: pan-y;
   }
   
   /* Custom cursor for interactive elements */
@@ -192,33 +216,54 @@
   /* Performance optimization for mobile */
   @media (max-width: 768px) {
     .animate-float {
-      animation: float 8s ease-in-out infinite;
+      animation: float 10s ease-in-out infinite;
       transform: translateZ(0);
       will-change: transform;
     }
     
     .animate-pulse-glow {
-      animation: pulse-glow 4s ease-in-out infinite;
+      animation: pulse-glow 6s ease-in-out infinite;
       transform: translateZ(0);
     }
     
-    /* Mobile-specific optimizations */
+    /* Ultra mobile-specific optimizations */
     * {
       backface-visibility: hidden;
       transform-style: preserve-3d;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
     }
     
     /* Lazy loading support */
     img[loading="lazy"] {
       transition: opacity 0.3s ease-in-out;
+      transform: translateZ(0);
+    }
+    
+    /* Scroll container optimization */
+    .scroll-container {
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+      scroll-behavior: smooth;
     }
     
     /* Reduce motion for battery saving */
     @media (prefers-reduced-motion: reduce) {
       .animate-float,
       .animate-pulse-glow {
-        animation-duration: 0s !important;
+        animation: none !important;
       }
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .animate-float {
+      animation: float 7s ease-in-out infinite;
+    }
+    
+    .animate-pulse-glow {
+      animation: pulse-glow 4s ease-in-out infinite;
     }
   }
 

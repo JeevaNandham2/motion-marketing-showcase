@@ -16,8 +16,9 @@ import {
 } from "lucide-react";
 
 const FloatingIcons = () => {
-  // Reduce icons for mobile devices
+  // Drastically reduce for mobile performance
   const isMobile = window.innerWidth < 768;
+  const isTablet = window.innerWidth < 1024;
   
   const icons = useMemo(() => [
     { Icon: Search, delay: 0, x: "10%", y: "20%" },
@@ -41,8 +42,8 @@ const FloatingIcons = () => {
       {/* Enhanced background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20"></div>
       
-      {/* Floating particles - reduced for mobile */}
-      {Array.from({ length: isMobile ? 8 : 20 }).map((_, i) => (
+      {/* Floating particles - minimal for mobile */}
+      {Array.from({ length: isMobile ? 3 : isTablet ? 8 : 15 }).map((_, i) => (
         <motion.div
           key={`particle-${i}`}
           className="absolute w-1 h-1 bg-accent/20 rounded-full"
@@ -98,8 +99,8 @@ const FloatingIcons = () => {
         </motion.div>
       ))}
       
-      {/* GPU-optimized glowing orbs with cyan theme - reduced for mobile */}
-      {Array.from({ length: isMobile ? 6 : 12 }).map((_, i) => (
+      {/* GPU-optimized glowing orbs - minimal for mobile */}
+      {Array.from({ length: isMobile ? 2 : isTablet ? 5 : 8 }).map((_, i) => (
         <motion.div
           key={`orb-${i}`}
           className="absolute rounded-full blur-2xl"
