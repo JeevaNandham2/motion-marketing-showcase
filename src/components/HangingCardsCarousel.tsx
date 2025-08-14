@@ -89,7 +89,7 @@ const HangingCardsCarousel = () => {
       </div>
 
       {/* Hanging Cards Container */}
-      <div className="relative h-[500px] overflow-hidden">
+      <div className="relative h-[400px] md:h-[500px] overflow-hidden">
         {/* Hanging Wire */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
         
@@ -104,8 +104,8 @@ const HangingCardsCarousel = () => {
             ease: "linear",
             repeatType: "loop"
           }}
-          className="flex gap-8 absolute top-8"
-          style={{ width: `${duplicatedServices.length * 320}px` }}
+          className="flex gap-4 md:gap-8 absolute top-8"
+          style={{ width: `${duplicatedServices.length * (window.innerWidth <= 768 ? 240 : 320)}px` }}
         >
           {duplicatedServices.map((service, index) => {
             const IconComponent = service.icon;
@@ -139,9 +139,9 @@ const HangingCardsCarousel = () => {
                 </div>
 
                 {/* Card */}
-                <Card className="w-72 h-96 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white border-0 overflow-hidden">
+                <Card className="w-56 h-80 md:w-72 md:h-96 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white border-0 overflow-hidden">
                   <CardContent className="p-0 h-full flex flex-col">
-                    <div className="relative h-40 overflow-hidden">
+                    <div className="relative h-32 md:h-40 overflow-hidden">
                       <img 
                         src={service.image} 
                         alt={service.title}
@@ -153,20 +153,20 @@ const HangingCardsCarousel = () => {
                       </div>
                     </div>
                     
-                    <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold text-center mb-3 text-foreground">
+                    <div className="p-4 md:p-6 flex-1 flex flex-col">
+                      <h3 className="text-lg md:text-xl font-bold text-center mb-2 md:mb-3 text-foreground">
                         {service.title}
                       </h3>
                       
-                      <p className="text-muted-foreground text-center leading-relaxed text-sm flex-1">
+                      <p className="text-muted-foreground text-center leading-relaxed text-xs md:text-sm flex-1">
                         {service.description}
                       </p>
                       
-                       <div className="mt-6 relative z-20">
+                       <div className="mt-4 md:mt-6 relative z-20">
                          <motion.button
-                           whileHover={{ scale: 1.05 }}
-                           whileTap={{ scale: 0.95 }}
-                           className="w-full py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 relative z-30"
+                           whileHover={{ scale: 1.02 }}
+                           whileTap={{ scale: 0.98 }}
+                           className="w-full py-2 md:py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300 relative z-30 text-sm md:text-base"
                          >
                            Learn More
                          </motion.button>

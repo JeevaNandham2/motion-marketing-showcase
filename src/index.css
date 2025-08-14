@@ -139,12 +139,14 @@
     }
   }
   
-  /* Mobile-specific scroll optimizations */
+  /* Ultra-smooth mobile optimizations */
   @media (max-width: 768px) {
     html, body {
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-y: none;
       scroll-behavior: smooth;
+      /* Reduce animation complexity on mobile */
+      animation-duration: 0.5s !important;
     }
     
     * {
@@ -152,6 +154,14 @@
       transform: translateZ(0);
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
+      /* Reduce transforms on mobile for performance */
+      will-change: auto;
+    }
+    
+    /* Limit animations on mobile for performance */
+    .motion-reduce-mobile * {
+      animation-duration: 0.2s !important;
+      transition-duration: 0.2s !important;
     }
   }
 

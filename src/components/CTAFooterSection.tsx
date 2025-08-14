@@ -19,31 +19,31 @@ const CTAFooterSection = () => {
     <>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary via-accent to-primary relative overflow-hidden">
-        {/* Background Animation */}
+        {/* Optimized Background Animation */}
         <div className="absolute inset-0">
           <motion.div
             animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
+              scale: [1, 1.1, 1],
+              rotate: [0, 90, 180],
             }}
             transition={{
-              duration: 20,
+              duration: 15,
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
+            className="absolute top-0 right-0 w-72 h-72 md:w-96 md:h-96 bg-white/10 rounded-full blur-3xl will-change-transform"
           />
           <motion.div
             animate={{
-              scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],
+              scale: [1.1, 1, 1.1],
+              rotate: [180, 90, 0],
             }}
             transition={{
-              duration: 25,
+              duration: 18,
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
+            className="absolute bottom-0 left-0 w-72 h-72 md:w-96 md:h-96 bg-white/10 rounded-full blur-3xl will-change-transform"
           />
         </div>
 
@@ -131,53 +131,53 @@ const CTAFooterSection = () => {
 
       {/* Footer */}
       <footer className="bg-black text-white py-16 relative overflow-hidden">
-        {/* Black Animated Background */}
+        {/* Optimized Background */}
         <div className="absolute inset-0">
           <motion.div
             animate={{
-              scale: [1, 1.3, 1],
-              rotate: [0, 360],
-              opacity: [0.1, 0.3, 0.1],
+              scale: [1, 1.2, 1],
+              rotate: [0, 180],
+              opacity: [0.1, 0.2, 0.1],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl will-change-transform"
+          />
+          <motion.div
+            animate={{
+              scale: [1.2, 1, 1.2],
+              rotate: [180, 0],
+              opacity: [0.15, 0.25, 0.15],
             }}
             transition={{
               duration: 15,
               repeat: Infinity,
               ease: "linear"
             }}
-            className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl"
-          />
-          <motion.div
-            animate={{
-              scale: [1.3, 1, 1.3],
-              rotate: [360, 0],
-              opacity: [0.2, 0.4, 0.2],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-            className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl"
+            className="absolute bottom-0 left-0 w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-gradient-to-tr from-accent/20 to-primary/20 rounded-full blur-3xl will-change-transform"
           />
           
-          {/* Floating particles */}
-          {Array.from({ length: 8 }).map((_, i) => (
+          {/* Reduced particles for mobile performance */}
+          {Array.from({ length: 4 }).map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-primary rounded-full"
               style={{
-                left: `${10 + i * 12}%`,
-                top: `${15 + i * 8}%`,
+                left: `${15 + i * 20}%`,
+                top: `${20 + i * 15}%`,
               }}
               animate={{
-                y: [-30, 30, -30],
-                opacity: [0.2, 1, 0.2],
-                scale: [0.5, 1.5, 0.5],
+                y: [-20, 20, -20],
+                opacity: [0.3, 0.8, 0.3],
+                scale: [0.8, 1.2, 0.8],
               }}
               transition={{
-                duration: 5 + i,
+                duration: 4 + i,
                 repeat: Infinity,
-                delay: i * 0.7,
+                delay: i * 0.5,
                 ease: "easeInOut"
               }}
             />
