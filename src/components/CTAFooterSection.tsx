@@ -109,7 +109,11 @@ const CTAFooterSection = () => {
               className="flex flex-wrap justify-center gap-8 mt-12 text-white/80"
             >
               <div className="text-center">
+<<<<<<< HEAD
                 <div className="text-2xl font-bold">500+</div>
+=======
+                <div className="text-2xl font-bold">100+</div>
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                 <div className="text-sm">Happy Clients</div>
               </div>
               <div className="text-center">
@@ -207,10 +211,17 @@ const CTAFooterSection = () => {
               {/* Social Links */}
               <div className="flex space-x-4">
                 {[
+<<<<<<< HEAD
                   { icon: Instagram, href: "#", label: "Instagram" },
                   { icon: Facebook, href: "#", label: "Facebook" },
                   { icon: Twitter, href: "#", label: "Twitter" },
                   { icon: Linkedin, href: "#", label: "LinkedIn" }
+=======
+                  { icon: Instagram, href: "https://www.instagram.com/adorycreatives?igsh=MWZibW95bHBqeHFjYg==", label: "Instagram" },
+                  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579255075163", label: "Facebook" },
+                  { icon: Twitter, href: "#", label: "Twitter" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/adory-creatives-a17769377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", label: "LinkedIn" }
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -264,7 +275,11 @@ const CTAFooterSection = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
+<<<<<<< HEAD
                   <span className="text-white/80">+91-44-1234-5678</span>
+=======
+                  <span className="text-white/80">+91-77-0807-7500</span>
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -282,7 +297,11 @@ const CTAFooterSection = () => {
             className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center"
           >
             <p className="text-white/60 text-sm">
+<<<<<<< HEAD
               © 2024 Adory Creatives. All rights reserved.
+=======
+              © 2025 Adory Creatives. All rights reserved.
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-white/60 hover:text-accent text-sm transition-colors duration-300">

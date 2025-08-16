@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button";
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
 import { ExternalLink } from "lucide-react";
 import portfolioEcommerce from "@/assets/portfolio-ecommerce.jpg";
 import portfolioCorporate from "@/assets/portfolio-corporate.jpg";
@@ -16,51 +20,100 @@ const ModernPortfolioSection = () => {
     {
       title: "Videography Projects",
       category: "Videography",
+<<<<<<< HEAD
       description: "Professional video production showcasing brand stories and marketing campaigns",
       image: portfolioEcommerce,
       metrics: { projects: "50+", views: "2M+", clients: "25+" },
       tags: ["4K Video", "Drone Shots", "Post-Production", "Color Grading"],
       driveLink: "https://drive.google.com/drive/folders/14tWYjvU3puIZdWug1or6Q3CHsAk-I2Qx"
+=======
+      description:
+        "Professional video production showcasing brand stories and marketing campaigns",
+      image: portfolioEcommerce,
+      metrics: { projects: "50+", views: "2M+", clients: "25+" },
+      tags: ["4K Video", "Drone Shots", "Post-Production", "Color Grading"],
+      driveLink:
+        "https://drive.google.com/drive/folders/14tWYjvU3puIZdWug1or6Q3CHsAk-I2Qx",
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
     },
     {
       title: "Motion Graphics Design",
       category: "Motion Graphics",
+<<<<<<< HEAD
       description: "Dynamic animated graphics and visual effects for digital marketing campaigns",
       image: portfolioCorporate,
       metrics: { animations: "100+", engagement: "+78%", brands: "30+" },
       tags: ["After Effects", "Cinema 4D", "Animation", "Visual Effects"],
       driveLink: "https://drive.google.com/drive/folders/1EIBGfD986_FNdrOfK7aQ7LJpknXGruqP"
+=======
+      description:
+        "Dynamic animated graphics and visual effects for digital marketing campaigns",
+      image: portfolioCorporate,
+      metrics: { animations: "100+", engagement: "+78%", brands: "30+" },
+      tags: ["After Effects", "Cinema 4D", "Animation", "Visual Effects"],
+      driveLink:
+        "https://drive.google.com/drive/folders/1EIBGfD986_FNdrOfK7aQ7LJpknXGruqP",
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
     },
     {
       title: "Graphics Design Portfolio",
       category: "Graphics Design",
+<<<<<<< HEAD
       description: "Creative visual designs for branding, marketing materials and digital campaigns",
       image: portfolioHealthcare,
       metrics: { designs: "200+", brands: "50+", campaigns: "75+" },
       tags: ["Logo Design", "Branding", "Print Design", "Digital Graphics"],
       driveLink: "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR"
+=======
+      description:
+        "Creative visual designs for branding, marketing materials and digital campaigns",
+      image: portfolioHealthcare,
+      metrics: { designs: "200+", brands: "50+", campaigns: "75+" },
+      tags: ["Logo Design", "Branding", "Print Design", "Digital Graphics"],
+      driveLink:
+        "https://drive.google.com/drive/folders/1g6VYsKggruU0AGf_LPf3E5NXVC08_NmR",
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
     },
     {
       title: "Real Estate Innovation",
       category: "Real Estate",
+<<<<<<< HEAD
       description: "Modern property platform with virtual tours and smart matching algorithms for buyers and sellers",
       image: portfolioRealEstate,
       metrics: { sales: "+67%", time: "-40%", satisfaction: "4.9/5" },
       tags: ["Vue.js", "3D", "Maps API", "ML"],
       driveLink: "https://drive.google.com/drive/folders/4jkl012mno345pqr678"
+=======
+      description:
+        "Modern property platform with virtual tours and smart matching algorithms for buyers and sellers",
+      image: portfolioRealEstate,
+      metrics: { sales: "+67%", time: "-40%", satisfaction: "4.9/5" },
+      tags: ["Vue.js", "3D", "Maps API", "ML"],
+     
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
     },
     {
       title: "SaaS Analytics Dashboard",
       category: "SaaS",
+<<<<<<< HEAD
       description: "Comprehensive business intelligence platform with real-time data visualization and insights",
       image: portfolioSaas,
       metrics: { efficiency: "+120%", insights: "1000+", clients: "250+" },
       tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
       driveLink: "https://drive.google.com/drive/folders/5mno345pqr678stu901"
+=======
+      description:
+        "Comprehensive business intelligence platform with real-time data visualization and insights",
+      image: portfolioSaas,
+      metrics: { efficiency: "+120%", insights: "1000+", clients: "250+" },
+      tags: ["React", "D3.js", "Node.js", "PostgreSQL"],
+    
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
     },
     {
       title: "Restaurant Chain Digitization",
       category: "Food & Beverage",
+<<<<<<< HEAD
       description: "Complete digital ecosystem for restaurant chain including ordering, delivery, and management systems",
       image: portfolioRestaurant,
       metrics: { orders: "+89%", efficiency: "+65%", revenue: "+134%" },
@@ -77,6 +130,37 @@ const ModernPortfolioSection = () => {
 
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+=======
+      description:
+        "Complete digital ecosystem for restaurant chain including ordering, delivery, and management systems",
+      image: portfolioRestaurant,
+      metrics: { orders: "+89%", efficiency: "+65%", revenue: "+134%" },
+      tags: ["React", "Node.js", "Payment", "GPS"],
+     
+    },
+  ];
+
+  const categories = [
+    "All",
+    "Videography",
+    "Motion Graphics",
+    "Graphics Design",
+    "Real Estate",
+    "SaaS",
+    "Food & Beverage",
+  ];
+
+  const filteredItems =
+    activeFilter === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter);
+
+  return (
+    <section
+      id="portfolio"
+      className="py-20 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden"
+    >
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,8 +182,13 @@ const ModernPortfolioSection = () => {
             Portfolio Showcase
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+<<<<<<< HEAD
             Explore our cutting-edge projects that transformed businesses and delivered 
             exceptional results across various industries.
+=======
+            Explore our cutting-edge projects that transformed businesses and
+            delivered exceptional results across various industries.
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
           </p>
         </motion.div>
 
@@ -137,12 +226,18 @@ const ModernPortfolioSection = () => {
           ))}
         </motion.div>
 
+<<<<<<< HEAD
         <motion.div 
           layout
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
             {filteredItems.map((item, index) => (
+=======
+        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <AnimatePresence>
+            {filteredItems.map((item) => (
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
               <motion.div
                 key={item.title}
                 layout
@@ -154,9 +249,15 @@ const ModernPortfolioSection = () => {
                 className="group"
               >
                 <Card className="overflow-hidden transition-all duration-500 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-border/30 hover:border-primary/50 hover:shadow-[0_20px_40px_hsl(0_0%_0%/0.3)] relative">
+<<<<<<< HEAD
                   {/* Hover glow effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
+=======
+                  {/* Hover glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                   <div className="relative overflow-hidden">
                     <div className="relative h-64 overflow-hidden">
                       <img
@@ -165,7 +266,11 @@ const ModernPortfolioSection = () => {
                         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+<<<<<<< HEAD
                       
+=======
+
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                       {/* Animated overlay */}
                       <motion.div
                         initial={{ opacity: 0, scale: 0 }}
@@ -173,7 +278,11 @@ const ModernPortfolioSection = () => {
                         className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-[1px]"
                       />
                     </div>
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                     <div className="absolute top-4 left-4">
                       <motion.span
                         whileHover={{ scale: 1.1 }}
@@ -182,21 +291,39 @@ const ModernPortfolioSection = () => {
                         {item.category}
                       </motion.span>
                     </div>
+<<<<<<< HEAD
                     
                     <motion.div 
+=======
+
+                    {/* Existing circular drive action (kept) */}
+                    <motion.div
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                       initial={{ opacity: 0, scale: 0 }}
                       whileHover={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.2 }}
                       className="absolute bottom-4 right-4"
                     >
                       <button
+<<<<<<< HEAD
                         onClick={() => window.open(item.driveLink, '_blank', 'noopener,noreferrer')}
+=======
+                        onClick={() =>
+                          window.open(
+                            item.driveLink,
+                            "_blank",
+                            "noopener,noreferrer"
+                          )
+                        }
+                        aria-label={`Open ${item.title} drive folder`}
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                         className="bg-gradient-to-r from-primary to-accent text-white p-3 rounded-full hover:shadow-[0_0_20px_hsl(187_84%_55%/0.5)] transition-all duration-300 group/link"
                       >
                         <ExternalLink className="w-5 h-5 group-hover/link:rotate-12 transition-transform" />
                       </button>
                     </motion.div>
                   </div>
+<<<<<<< HEAD
                   
                   <CardContent className="p-6 relative">
                     <motion.h3 
@@ -224,11 +351,47 @@ const ModernPortfolioSection = () => {
                     
                     <div className="flex flex-wrap gap-2">
                       {item.tags.map((tag, index) => (
+=======
+
+                  <CardContent className="p-6 relative">
+                    <motion.h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300">
+                      {item.title}
+                    </motion.h3>
+
+                    <p className="text-muted-foreground mb-6 line-clamp-2 group-hover:text-muted-foreground/80 transition-colors">
+                      {item.description}
+                    </p>
+
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      {Object.entries(item.metrics).map(([key, value], idx) => (
+                        <motion.div
+                          key={key}
+                          className="text-center p-3 rounded-lg bg-secondary/30 group-hover:bg-gradient-to-br group-hover:from-primary/10 group-hover:to-accent/10 transition-all duration-300"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ delay: idx * 0.1 }}
+                        >
+                          <div className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                            {value}
+                          </div>
+                          <div className="text-xs text-muted-foreground capitalize">
+                            {key}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {item.tags.map((tag, idx) => (
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                         <motion.span
                           key={tag}
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
                           transition={{ delay: index * 0.1 }}
+=======
+                          transition={{ delay: idx * 0.1 }}
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                           whileHover={{ scale: 1.1, y: -2 }}
                           className="bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground px-3 py-1 rounded-full text-xs border border-border/50 hover:border-primary/30 transition-all duration-300"
                         >
@@ -236,6 +399,26 @@ const ModernPortfolioSection = () => {
                         </motion.span>
                       ))}
                     </div>
+<<<<<<< HEAD
+=======
+
+                    {/* NEW: Full-width 'Open in Drive' button (visible on all devices) */}
+                    <Button
+                      asChild
+                      className="w-full bg-primary hover:bg-primary/90 text-white font-medium"
+                      disabled={!item.driveLink}
+                    >
+                      <a
+                        href={item.driveLink || "#"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${item.title} in Google Drive`}
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Open in Drive
+                      </a>
+                    </Button>
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                   </CardContent>
                 </Card>
               </motion.div>
@@ -250,7 +433,11 @@ const ModernPortfolioSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mt-20"
         >
+<<<<<<< HEAD
           <motion.h3 
+=======
+          <motion.h3
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             whileInView={{ scale: [0.9, 1, 0.95, 1] }}
             transition={{ duration: 0.8 }}
@@ -261,11 +448,22 @@ const ModernPortfolioSection = () => {
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
+<<<<<<< HEAD
               const contactSection = document.getElementById('contact');
               if (contactSection) {
                 contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
               } else {
                 window.location.href = '/contact';
+=======
+              const contactSection = document.getElementById("contact");
+              if (contactSection) {
+                contactSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              } else {
+                window.location.href = "/contact";
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
               }
             }}
             className="bg-gradient-to-r from-primary to-accent text-white px-12 py-4 rounded-full font-semibold text-lg shadow-[0_0_30px_hsl(187_84%_55%/0.3)] hover:shadow-[0_0_50px_hsl(187_84%_55%/0.5)] transition-all duration-300 relative overflow-hidden group animate-pulse-glow"
@@ -284,4 +482,8 @@ const ModernPortfolioSection = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ModernPortfolioSection;
+=======
+export default ModernPortfolioSection;
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))

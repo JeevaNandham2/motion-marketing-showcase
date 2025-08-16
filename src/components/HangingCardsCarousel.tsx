@@ -79,11 +79,19 @@ const HangingCardsCarousel = () => {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
+<<<<<<< HEAD
             Digital Marketing Services in Chennai & Kilpauk
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive SEO, Social Media & Google Ads solutions to grow your Chennai business online. 
             Trusted by 500+ local businesses in Kilpauk, T.Nagar & Anna Nagar.
+=======
+            Digital Marketing Services in Chennai , Kilpauk
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Comprehensive SEO, Social Media & Google Ads solutions to grow your Chennai business online. 
+            Trusted by 100+ local businesses in Kilpauk, T.Nagar & Anna Nagar.
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
           </p>
         </motion.div>
       </div>

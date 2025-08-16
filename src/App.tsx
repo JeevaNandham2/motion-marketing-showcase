@@ -7,6 +7,10 @@ import SmoothScrollProvider from "./components/SmoothScrollProvider";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+<<<<<<< HEAD
+=======
+import ContactSection from "./pages/Contact";
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
 
 const queryClient = new QueryClient();
 
@@ -19,7 +23,11 @@ const App = () => (
         <SmoothScrollProvider>
           <Routes>
             <Route path="/" element={<Index />} />
+<<<<<<< HEAD
             <Route path="/contact" element={<Contact />} />
+=======
+            <Route path="/contact" element={<ContactSection/>} />
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

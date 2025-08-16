@@ -72,7 +72,11 @@ const ModernNavigation = () => {
               onClick={() => scrollToSection("services")}
               className="text-foreground hover:text-primary transition-colors"
             >
+<<<<<<< HEAD
               Services
+=======
+              Home
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
@@ -80,12 +84,20 @@ const ModernNavigation = () => {
             >
               Portfolio
             </button>
+<<<<<<< HEAD
             <button
+=======
+            {/* <button
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
               onClick={() => scrollToSection("blog")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Blog
+<<<<<<< HEAD
             </button>
+=======
+            </button> */}
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             <Link
               to="/contact"
               className="text-foreground hover:text-primary transition-colors"

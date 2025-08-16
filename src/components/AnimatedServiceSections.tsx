@@ -14,7 +14,11 @@ const AnimatedServiceSections = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
+<<<<<<< HEAD
             <h3 className="text-4xl font-bold text-foreground">SEO Services Chennai & Kilpauk</h3>
+=======
+            <h3 className="text-4xl font-bold text-foreground">SEO Services Chennai , Kilpauk</h3>
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             <p className="text-xl text-muted-foreground">
               Dominate Chennai search results and drive organic traffic to your website with our proven local SEO strategies. 
               Helping businesses in Kilpauk, T.Nagar & Anna Nagar rank #1 on Google.
@@ -118,7 +122,11 @@ const AnimatedServiceSections = () => {
                         }}
                       >
                         <Heart className="w-4 h-4 text-red-500" />
+<<<<<<< HEAD
                         <span className="text-sm text-foreground">1.2k</span>
+=======
+                        <span className="text-sm text-foreground">5.5k</span>
+>>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
                       </motion.div>
                     </div>
                     <motion.button
