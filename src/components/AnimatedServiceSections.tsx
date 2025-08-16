@@ -1,11 +1,20 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Instagram, Target, PenTool, Mail, Heart, Facebook, Twitter, Linkedin } from "lucide-react";
+import {
+  TrendingUp,
+  Instagram,
+  Target,
+  PenTool,
+  Mail,
+  Heart,
+  Facebook,
+  Twitter,
+  Linkedin,
+} from "lucide-react";
 
 const AnimatedServiceSections = () => {
   return (
     <div className="py-20 space-y-32">
-      {/* SEO Section */}
       <section id="seo" className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -14,38 +23,37 @@ const AnimatedServiceSections = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-<<<<<<< HEAD
-            <h3 className="text-4xl font-bold text-foreground">SEO Services Chennai & Kilpauk</h3>
-=======
-            <h3 className="text-4xl font-bold text-foreground">SEO Services Chennai , Kilpauk</h3>
->>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
+            <h3 className="text-4xl font-bold text-foreground">
+              SEO Services Chennai,Kilpauk
+            </h3>
             <p className="text-xl text-muted-foreground">
-              Dominate Chennai search results and drive organic traffic to your website with our proven local SEO strategies. 
-              Helping businesses in Kilpauk, T.Nagar & Anna Nagar rank #1 on Google.
+              Dominate Chennai search results and drive organic traffic to your website with our
+              proven local SEO strategies. Helping businesses in Kilpauk, T.Nagar &amp; Anna Nagar
+              rank #1 on Google.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span>Keyword Research & Analysis</span>
+                <div className="w-2 h-2 bg-accent rounded-full" />
+                <span>Keyword Research &amp; Analysis</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <div className="w-2 h-2 bg-accent rounded-full" />
                 <span>On-Page Optimization</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <div className="w-2 h-2 bg-accent rounded-full" />
                 <span>Technical SEO Audits</span>
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
-                <Card className="p-6 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-border/30">
+            <Card className="p-6 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm border border-border/30">
               <CardContent className="p-0">
                 <div className="flex items-center gap-4 mb-6">
                   <TrendingUp className="w-8 h-8 text-primary" />
@@ -78,7 +86,6 @@ const AnimatedServiceSections = () => {
         </div>
       </section>
 
-      {/* Social Media Section */}
       <section id="social" className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -89,12 +96,13 @@ const AnimatedServiceSections = () => {
           >
             <div className="grid grid-cols-2 gap-4">
               {[
-                { name: "Instagram", icon: Instagram, color: "text-pink-500", bgColor: "bg-card/80 border-pink-500/20" },
-                { name: "Facebook", icon: Facebook, color: "text-blue-600", bgColor: "bg-card/80 border-blue-500/20" },
-                { name: "Twitter", icon: Twitter, color: "text-sky-500", bgColor: "bg-card/80 border-sky-500/20" },
-                { name: "LinkedIn", icon: Linkedin, color: "text-blue-700", bgColor: "bg-card/80 border-blue-700/20" }
+                { name: "Instagram", icon: Instagram, color: "text-pink-500", bg: "bg-card/80 border-pink-500/20" },
+                { name: "Facebook", icon: Facebook, color: "text-blue-600", bg: "bg-card/80 border-blue-500/20" },
+                { name: "Twitter", icon: Twitter, color: "text-sky-500", bg: "bg-card/80 border-sky-500/20" },
+                { name: "LinkedIn", icon: Linkedin, color: "text-blue-700", bg: "bg-card/80 border-blue-700/20" },
               ].map((platform, index) => {
-                const IconComponent = platform.icon;
+                const Icon = platform.icon;
+                const counts = ["1.2k", "2.3k", "3.1k", "1.8k"];
                 return (
                   <motion.div
                     key={platform.name}
@@ -102,36 +110,26 @@ const AnimatedServiceSections = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.05, rotate: 2 }}
-                    className={`${platform.bgColor} p-4 rounded-xl shadow-lg border backdrop-blur-sm relative overflow-visible`}
+                    className={`${platform.bg} p-4 rounded-xl shadow-lg border backdrop-blur-sm relative overflow-visible`}
                   >
                     <div className="flex items-center gap-3 mb-2">
-                      <IconComponent className={`w-6 h-6 ${platform.color}`} />
+                      <Icon className={`w-6 h-6 ${platform.color}`} />
                       <span className="font-semibold text-foreground">{platform.name}</span>
                     </div>
                     <div className="space-y-2 relative overflow-visible">
                       <motion.div
-                        animate={{ 
-                          scale: [1, 1.3, 1],
-                          y: [0, -8, 0]
-                        }}
+                        animate={{ scale: [1, 1.3, 1], y: [0, -8, 0] }}
                         transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
                         className="flex gap-1 relative z-10"
-                        style={{ 
-                          position: 'relative',
-                          overflow: 'visible'
-                        }}
+                        style={{ position: "relative", overflow: "visible" }}
                       >
                         <Heart className="w-4 h-4 text-red-500" />
-<<<<<<< HEAD
-                        <span className="text-sm text-foreground">1.2k</span>
-=======
-                        <span className="text-sm text-foreground">5.5k</span>
->>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
+                        <span className="text-sm text-foreground">{counts[index]}</span>
                       </motion.div>
                     </div>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
-                      onClick={() => window.location.href = '/contact'}
+                      onClick={() => (window.location.href = "/contact")}
                       className="mt-3 w-full bg-gradient-to-r from-primary to-accent text-white px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300"
                     >
                       Get Started
@@ -141,7 +139,7 @@ const AnimatedServiceSections = () => {
               })}
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -150,14 +148,13 @@ const AnimatedServiceSections = () => {
           >
             <h3 className="text-4xl font-bold">Social Media Marketing Chennai</h3>
             <p className="text-xl text-muted-foreground">
-              Build meaningful connections with your Chennai audience across all social platforms. 
+              Build meaningful connections with your Chennai audience across all social platforms.
               Specialized in local community engagement for Kilpauk and surrounding areas.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* PPC Ads Section */}
       <section id="ppc" className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -171,7 +168,7 @@ const AnimatedServiceSections = () => {
               Get instant visibility and drive targeted traffic with optimized Google and Facebook ads.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -194,7 +191,13 @@ const AnimatedServiceSections = () => {
                 <h4 className="font-semibold text-foreground">Digital Marketing Services</h4>
                 <p className="text-sm text-muted-foreground">Boost your online presence today</p>
                 <motion.div
-                  animate={{ backgroundColor: ["hsl(var(--muted))", "hsl(var(--primary) / 0.1)", "hsl(var(--muted))"] }}
+                  animate={{
+                    backgroundColor: [
+                      "hsl(var(--muted))",
+                      "hsl(var(--primary) / 0.1)",
+                      "hsl(var(--muted))",
+                    ],
+                  }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="text-xs text-primary mt-2 px-2 py-1 rounded"
                 >
@@ -206,7 +209,6 @@ const AnimatedServiceSections = () => {
         </div>
       </section>
 
-      {/* Content Marketing Section */}
       <section id="content" className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -230,9 +232,13 @@ const AnimatedServiceSections = () => {
                 Create Engaging Content That Converts
               </motion.span>
             </motion.h4>
-            
+
             <div className="space-y-3">
-              {["5 Ways to Boost Your SEO", "Social Media Trends 2024", "Email Marketing Guide"].map((title, index) => (
+              {[
+                "5 Ways to Boost Your SEO",
+                "Social Media Trends 2024",
+                "Email Marketing Guide",
+              ].map((title, index) => (
                 <motion.div
                   key={title}
                   initial={{ opacity: 0, y: 20 }}
@@ -246,7 +252,7 @@ const AnimatedServiceSections = () => {
               ))}
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -261,7 +267,6 @@ const AnimatedServiceSections = () => {
         </div>
       </section>
 
-      {/* Email Marketing Section */}
       <section id="email" className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -275,7 +280,7 @@ const AnimatedServiceSections = () => {
               Nurture leads and retain customers with personalized email marketing campaigns.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -292,19 +297,21 @@ const AnimatedServiceSections = () => {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Mail className="w-5 h-5 text-primary" />
-                  <span className="font-semibold text-foreground">Welcome Email #{email}</span>
+                  <span className="font-semibold text-foreground">
+                    Welcome Email #{email}
+                  </span>
                 </div>
                 <p className="text-sm text-muted-foreground mb-3">
                   Thank you for joining our digital marketing journey!
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => (window.location.href = "/contact")}
                   animate={{
                     boxShadow: [
                       "0 0 0 0 rgba(59, 130, 246, 0.4)",
                       "0 0 0 10px rgba(59, 130, 246, 0)",
-                    ]
+                    ],
                   }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                   className="bg-accent text-white px-4 py-2 rounded text-sm font-semibold"

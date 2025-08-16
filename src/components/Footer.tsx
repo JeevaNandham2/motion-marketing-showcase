@@ -60,7 +60,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-<<<<<<< HEAD
+
                 <span className="text-primary-foreground/80">hello@adorycreatives.com</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -70,7 +70,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-1" />
                 <span className="text-primary-foreground/80">123 Creative Street<br />Digital City, DC 12345</span>
-=======
+
                 <span className="text-primary-foreground/80">adorycreatives@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -80,7 +80,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-1" />
                 <span className="text-primary-foreground/80">1 st cross Street Kilpauk garden colony<br />Kilpauk, Chennai, Tamil Nadu 600010</span>
->>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
+
               </div>
             </div>
           </div>

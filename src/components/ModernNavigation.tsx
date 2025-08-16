@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
 const ModernNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -19,12 +16,17 @@ const ModernNavigation = () => {
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {
       const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      if (element) element.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Navigate to homepage with hash
       window.location.href = `/#${sectionId}`;
+    }
+  };
+
+  const goHome = () => {
+    if (isHomePage) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.location.href = "/";
     }
   };
 
@@ -40,20 +42,13 @@ const ModernNavigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo */}
+          {/* Logo */}
           <Link to="/" className="flex items-center group">
             <div className="relative">
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 rounded-xl blur-xl opacity-50"
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.6, 0.3]
-                }}
-                transition={{ 
-                  duration: 3, 
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               />
               <div className="relative bg-gradient-to-br from-background/90 to-card/90 backdrop-blur-sm rounded-xl p-3 border border-primary/20">
                 <img
@@ -68,36 +63,34 @@ const ModernNavigation = () => {
 
           {/* Navigation Menu */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* <button
+              onClick={goHome}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </button> */}
+
             <button
               onClick={() => scrollToSection("services")}
               className="text-foreground hover:text-primary transition-colors"
             >
-<<<<<<< HEAD
-              Services
-=======
               Home
->>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
             </button>
+
             <button
               onClick={() => scrollToSection("portfolio")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Portfolio
             </button>
-<<<<<<< HEAD
-            <button
-=======
+
             {/* <button
->>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
               onClick={() => scrollToSection("blog")}
               className="text-foreground hover:text-primary transition-colors"
             >
               Blog
-<<<<<<< HEAD
-            </button>
-=======
             </button> */}
->>>>>>> 87897c3 (chore: setup GH Pages (workflow, ignore, SEO build))
+
             <Link
               to="/contact"
               className="text-foreground hover:text-primary transition-colors"
@@ -105,7 +98,6 @@ const ModernNavigation = () => {
               Contact
             </Link>
           </div>
-
         </div>
       </div>
     </motion.nav>
